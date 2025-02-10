@@ -1,0 +1,147 @@
+/* AboutUs.css */
+
+.about-us {
+    color: #ccc; /* Light gray text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+}
+
+.about-us-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    gap: 2rem; /* Space between text and image */
+}
+
+.about-us-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-us-index {
+    color: #555; /* Dark gray for the index */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-us-title {
+    color: #fff; /* White for the title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.about-us-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-image img {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover;
+    transform: rotateY(-35deg) rotateX(10deg); /* Tilt the image */
+    transition: transform 0.5s ease-in-out; /* Smooth animation for hover effect */
+    border-radius: 12px; /* Optional rounded corners */
+}
+
+@media (max-width: 1200px) {
+    .about-us-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .about-us-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .about-us-title {
+        font-size: 2rem;
+    }
+
+    .about-us-description {
+        font-size: 1.1rem;
+    }
+
+    .about-us-image img {
+        transform: rotateY(-20deg) rotateX(5deg); /* Slightly less tilt */
+    }
+}
+
+@media (max-width: 992px) {
+    .about-us-container {
+        padding: 1rem;
+    }
+
+    .about-us-text {
+        text-align: center;
+    }
+
+    .about-us-title {
+        font-size: 1.8rem;
+    }
+
+    .about-us-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .about-us-image img {
+        transform: rotateY(-10deg) rotateX(5deg); /* Subtle tilt for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .about-us-text {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-us-title {
+        font-size: 1.6rem;
+    }
+
+    .about-us-description {
+        font-size: 0.9rem;
+    }
+
+    .about-us-image img {
+        transform: rotateY(0deg) rotateX(0deg); /* No tilt on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us-container {
+        padding: 1rem;
+    }
+
+    .about-us-title {
+        font-size: 1.5rem;
+    }
+
+    .about-us-description {
+        font-size: 0.8rem;
+    }
+
+    .about-us-image img {
+        width: 80%; /* Adjust image size for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

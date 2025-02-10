@@ -1,0 +1,256 @@
+/* General Styles */
+.hero-container {
+    background: url('../assets/hero2.png');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero {
+    width: 90vw;
+  }
+
+  .video_cont {
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+  }
+ 
+  
+  /* Profile Picture */
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Hero Title */
+  .hero-title {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 50px 0 0 0;
+  }
+
+  .hero-para {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: -10px 0 20px 0;
+  }
+  .hero-para1 {
+    color: #3587b6;
+  }
+  
+  /* Tags Section */
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+    max-width: 600px;
+  }
+  
+  .tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .tag:hover {
+    background: rgb(255, 255, 255);
+    color: black;
+  }
+
+  .timer {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    padding: 0 20px 20px 20px;
+    border-radius: 20px;
+  }
+
+  .dayscountdet {
+    display: flex;
+    justify-content: right;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .countdet {
+    display: flex;
+    position: relative; 
+    justify-content: right;
+    gap: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .count1 {
+    padding: 15px;
+    min-width: 80px;
+    width: 390px;
+    font-size: 4rem;
+    border-radius: 24px;
+    margin: 0 0 -20px 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .count {
+    padding: 15px;
+    min-width: 95px;
+    border-radius: 24px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 5rem;
+        text-align: center;
+        padding: 200px 12px 0 12px;
+    }
+
+    .hero-para {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .tags-container {
+        justify-content: center;
+    }
+
+    .hero-container {
+        padding: 0;
+      }
+      
+    .timer {
+        top: 30%;
+        right: 5%;
+    }
+    .countdet {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4rem;
+        padding: 200px 12px 0 12px;
+    }
+
+    .hero-para {
+        font-size: 1rem;
+    }
+
+    .tags-container {
+        gap: 8px;
+    }
+
+    .tag {
+        font-size: 0.875rem;
+        padding: 6px 12px;
+    }
+
+    .count1, .count {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .hero-container {
+        padding: 0;
+      }
+      
+    .timer {
+        top: 20%;
+        right: 10%;
+    }
+    .countdet {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 4rem;
+        text-align: left;
+        padding: 200px 12px 0 12px;
+    }
+
+    .hero-para {
+        font-size: 1.5rem;
+        width: 300px;
+        text-align: left;
+        padding: 0 12px;
+    }
+
+    .tags-container {
+        justify-content: left;
+        padding: 0 12px;
+        font-size: 24px;
+        gap: 5px;
+    }
+
+    .tag {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        width: 170px;
+        height: 50px;
+    }
+
+    .dayscountdet {
+        width: 60%;
+        font-size: 44px;
+        padding: 50px 0 0 0;
+    }
+    .countdet {
+        display: none;
+    }
+
+    .count1 {
+        font-size: 2rem;
+        padding: 8px;
+    }
+
+    .count {
+        min-width: 48px;
+        font-size: 1.25rem;
+        padding: 8px;
+    }
+
+    .hero-container {
+        padding: 0;
+      }
+
+    .timer {
+        position: relative;
+        top: 15%;
+        right: 23%;
+        width: 100vw;
+        display: flex;
+        justify-content: left;
+    }
+}

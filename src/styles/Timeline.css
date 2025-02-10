@@ -1,0 +1,175 @@
+/* Timeline.css */
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 120px;
+    width: 4px;
+    height: 93%;
+    border-radius: 50px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 80%;
+    max-width: 1000px;
+    z-index: 2;
+  }
+  
+  .timeline-item.left {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    transform: translateX(-28%); /* Move the left items further from the line */
+  }
+  
+  .timeline-item.right {
+    flex-direction: row;
+    justify-content: flex-end;
+    transform: translateX(-19%); /* Move the right items further from the line */
+  }
+  
+  .timeline-time {
+    font-size: 24px;
+    width: 160px;
+    font-weight: bold;
+    margin: 0 40px;
+  }
+  .timeline-item.left .timeline-time {
+    text-align: left;
+  }
+  
+  .timeline-content {
+    background-color: #22263a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 25%;
+  }
+  
+  .timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content p {
+    font-size: 16px;
+  }
+  
+  .timeline-item.left .timeline-content {
+    text-align: right;
+  }
+  
+  .timeline-item.right .timeline-content {
+    text-align: left;
+  }
+  .arrow_img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+  }
+  /* View More Button */
+  .view-more-btn {
+    background-color: #b8d7ff;
+    color: #000000;
+    font-size: 21px;
+    width: 180px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 2;
+  }
+  
+  .view-more-btn:hover {
+    background-color: #3f3e5f;
+    color: #b8d7ff;
+  }
+  
+
+  @media (max-width: 1200px) {
+    .timeline-item {
+        width: 20%; /* Make items take more space on medium screens */
+    }
+
+    .timeline-content {
+        width: 30%; /* Adjust content width */
+    }
+
+    .view-more-btn {
+        font-size: 19px; /* Reduce button font size */
+        width: 160px; /* Adjust button width */
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline-item {
+        width: 95%; /* Further adjust item width */
+    }
+
+    .timeline-content {
+        width: 40%; /* Increase content width */
+    }
+
+    .view-more-btn {
+        font-size: 18px; /* Reduce button font size */
+        width: 150px; /* Reduce button width */
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center;
+        width: 100%; /* Full width on mobile screens */
+    }
+
+    .timeline-content {
+        width: 80%; /* Increase content width on small screens */
+    }
+
+    .view-more-btn {
+        font-size: 16px; /* Further reduce button font size */
+        width: 140px; /* Adjust button width */
+    }
+}
+
+@media (max-width: 576px) {
+    .timeline-item {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width on very small screens */
+    }
+
+    .timeline-item.left {
+        transform: translate(-5%);
+    }
+
+    .timeline-time {
+        margin: 0 16px;
+    }
+
+    .timeline-item.right {
+            transform: translate(-2%);
+    }
+
+    .timeline-content {
+        width: 34%; /* Full width on very small screens */
+    }
+
+    .view-more-btn {
+        font-size: 14px; /* Make button font size small */
+        width: 120px; /* Adjust button width */
+    }
+}

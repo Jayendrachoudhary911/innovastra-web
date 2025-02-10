@@ -1,0 +1,39 @@
+.sponsors {
+    padding: 110px 0 0 0;
+}
+
+.sponsors h1 {
+    font-size: 34px;
+}
+
+.marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee-content {
+    display: inline-block;
+}
+
+.sponsor_card {
+    border-radius: 15px;
+    margin: 0 20px;
+}
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
